@@ -1,28 +1,26 @@
 package Week05CodingAssignment;
 
-public class AsteriskLogger {
+public class AsteriskLogger implements Logger{
 
-	//public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	//}
-	
-	String string;
-	
-	//Constructor
-	public AsteriskLogger(String string) {
-		this.string = string;
-	}
-	
-	
 	//Methods
-	public void log() {
+	@Override
+	public void log(String string) {
 		System.out.println("***" + string + "***");
 	}
 	
-	public void error() {
+	@Override
+	public void error(String string) {
 		System.out.println("******************" + "\n***" + "Error: " + string + "***" + "\n******************");
 	}
+	
+
+	//String string;
+	
+	//Constructor
+	//public AsteriskLogger(String string) {
+	//	this.string = string;
+	//}
+	
 	
 	
 	//Getters & Setters
@@ -34,5 +32,5 @@ public class AsteriskLogger {
 	//}
 	
 	
-
-}
+	}
+//}

@@ -1,21 +1,22 @@
 package Week05CodingAssignment;
 
-public class SpacedLogger {
+public class SpacedLogger implements Logger{
 
 	//public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	//}
 	
-	String string;
+	//String string;
 	
 	//Constructor
-	public SpacedLogger(String string) {
-		this.string = string;
-	}
+	//public SpacedLogger(String string) {
+	//	this.string = string;
+	//}
 	
 	//Methods
-	public void log () {
+	@Override
+	public void log (String string) {
 		StringBuilder result = new StringBuilder();
 		for (int i=0; i<string.length(); i++) {
 		if (i>0) {
@@ -26,7 +27,8 @@ public class SpacedLogger {
 		System.out.println(result.toString());
 	}
 	
-	public void error () {
+	@Override
+	public void error (String string) {
 		
 		StringBuilder result = new StringBuilder();
 		for (int i=0; i<string.length(); i++) {
